@@ -1,0 +1,77 @@
+html {
+  box-sizing: border-box;
+  font-size: $medium-font-size;
+  line-height: $base-line-height;
+  @media (max-width: $screen-sml) {
+    font-size: $small-font-size;
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $base-font-family;
+  margin: 0;
+  padding: 0 1em;
+
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+object,
+img {
+  width: 100%;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+  transition: color 0.2s ease-in;
+
+  &:active, &:hover {
+    color: $red;
+  }
+}
+
+hr {
+  border: none;
+  border-bottom: 1px dotted;
+  padding: 1em 0;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  margin: 3em 0 0;
+  padding: 1em;
+  background: $grey-light;
+}
+
+input {
+  font-size: inherit;
+  font-family: $base-font-family;
+  padding: 0.38em 0.5em;
+  box-shadow: none;
+  border: 1px solid $grey;
+  border-radius: $radius;
+  box-shadow: 0 0 4px lighten($grey, 5%) inset;
+  &:focus, :active {
+    border-color: $blue-light;
+    outline: none;
+  }
+}

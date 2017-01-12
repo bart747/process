@@ -1,0 +1,67 @@
+
+@mixin row($justify: center) {
+  display: flex;
+  justify-content: $justify;
+}
+
+@mixin col($size) {
+  flex: 1 1 auto;
+  flex-basis: $size;
+}
+
+@mixin columns {
+  .col {
+    flex: 1 1 auto;
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+
+  .col-100 {
+    flex-basis: 100%;
+  }
+
+  .col-50 {
+    flex-basis: 50%;
+  }
+
+  .col-75 {
+    flex-basis: 75%;
+  }
+
+  .col-25 {
+    flex-basis: 25%;
+  }
+
+  .col-88 {
+    flex-basis: 88%;
+  }
+
+  .col-12 {
+    flex-basis: 12%;
+  }
+
+  .col:first-child {
+    margin-left: 0;
+  }
+
+  .col:last-child {
+    margin-right: 0;
+  }
+}
+
+.row.row-fix {
+  display: flex;
+  justify-content: flex-start;
+  @include columns;
+}
+
+@media (min-width: $screen-mid) {
+
+  .row {
+    display: flex;
+    justify-content: center;
+    @include columns;
+  }
+  
+}
+

@@ -1,0 +1,45 @@
+button,
+.btn {
+  display: inline-block;
+  font-size: 1em;
+  color: #fff;
+  cursor: pointer;
+  background: $blue;
+  border: solid $blue-dark;
+  border-width: 1px;
+  border-radius: $radius;
+  box-shadow: 0 1px 4px $grey;  
+  outline: none; 
+  padding: 0.4em 1em;
+  text-align: center;
+  margin: 0;
+  max-width: 12em;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:active,
+  &:focus { 
+    background: $blue-light;
+    outline: none;
+  }
+  &:active {
+    background: $blue-dark;
+    border-color: $blue-dark;
+    box-shadow: none;  
+  }
+}
+
+.btn-neutral {
+  background: lighten($blue-light, 30%);
+  color: $text-color;
+  &:hover,
+  &:active,
+  &:focus { 
+    background: lighten($blue-light, 20%);
+    outline: none;
+  }
+  &:active {
+    background: lighten($blue-light, 10%);
+    border-color: lighten($blue-light, 10%);
+  }
+}
